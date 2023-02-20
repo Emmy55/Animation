@@ -1,0 +1,44 @@
+{% extends 'blog/layout.html' %}
+
+{% load static %}
+
+{% block 'body' %}
+<head>
+    <link rel="stylesheet" href="{% static 'blog/card.css' %}">
+</head>
+
+<div class="hero">
+    <div class="one">
+        <h1>YOUR HOME <br>FOR TECH <br>UPDATES</h1>
+        <p>Python, Django, Dart, C++, C#, Ruby, TECHUB is your home for updated tech news</p>
+
+    </div>
+    <div class="two">
+        <img width="100%" src="{% static 'blog/tech.png' %}" alt="">
+
+    </div>
+</div>
+<div class="sect">
+<h1>BLOG POST</h1>
+<div class=" div article">
+    <div class="artone">
+        {% for item in blog %}
+        <!-- <div class="container"> -->
+            <div class="card">
+                <figure class="card__thumb">
+                    <img src="https://source.unsplash.com/75S9fpDJVdo/300x510" alt="Picture by Kyle Cottrell" class="card__image">
+                    <figcaption class="card__caption">
+                        <h2 class="card__title">{{ item.title }}</h2>
+                        <p class="card__snippet">{{ item.stext }}</p>
+                        <a href="{% url 'blogpost' item.slug %}" class="card__button">Read more</a>
+                    </figcaption>
+                </figure>
+            <!-- </div> -->
+    </div>
+    {%endfor%}
+</div>
+    <div class="arttwo"></div>
+</div>
+
+</div>
+{% endblock %}

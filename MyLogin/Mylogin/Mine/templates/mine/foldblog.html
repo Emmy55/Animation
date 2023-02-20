@@ -1,0 +1,12 @@
+{% extends 'mine/home.html' %}
+
+{%load static %}
+
+{%block 'sect' %}
+<p>{{ past.date }}</p>
+
+<h1>{{ past.title}}</h1>
+<p>{{ past.ltext }}</p>
+
+
+{%endblock%}

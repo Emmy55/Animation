@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 14px;
+    }
+    body {
+        background-image: url("{% static 'images/dope.gif' %}");
+        background-repeat: no-repeat;
+        background-size: 100% 180%;
+    }
+    li {
+        display: inline;
+        padding: 40px;
+        position: relative;
+        top: -10px;
+        color: white;
+        
+    }
+    nav {
+        /* justify-content: center; */
+        background-color: black;
+        height: 30px;
+        padding: 10px;
+        border-radius: 9px;
+        position: absolute;
+        margin-left: 90px;
+        width: 85%;
+
+    }
+    .guy {
+        display: flex;
+    }
+    .yet, .yet1, .yet2 {
+        background-color: rgba(181, 191, 198, 0.189);
+        height: 400px;
+        width: 430px;
+        border-radius: 10px;
+        margin-left: 8px;
+    }
+    
+    #dem {
+        color: white;
+        margin-left: 10vw;
+        position: relative;
+        top: 20px;
+        font-size: 40px
+    }
+    .link{
+        text-decoration: none;
+        color: white;
+    }
+    .butt{
+        position: relative;
+        left: 1150px;
+        background-color: tomato;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        top: 52px;
+        z-index: 1;
+        width: 120px;
+    }
+</style>
+<body>
+    <button class="butt"><a class="link" href="{% url 'home1' %}">Sign in</a></button>
+    <nav>
+        <ul>
+            <li><a class="link" href="{% url 'first' %}"> Home</a></li>
+            <li><a class="link" href="{% url 'home' %}">About</a></li>
+            <li>Courses</li>
+            <li>Lectures</li>
+            <li>Notes</li>
+            <li>Blogs</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <section>
+        {% block 'section' %}
+
+        {% endblock%}
+    </section>
+
+
+
+
+
+
+
+    <footer class="dem"><br><br>
+        <h1 id="dem">DESIGN EXPERTS</h1><br><br><br>
+        <div class="guy">
+            <div class="yet" >
+                <img style="height: 100%; width: 100%; border-radius: 5px;" src="{% static 'images/ohh.gif' %}" alt="">
+            </div>
+            <div class="yet1" >
+                <img style="height: 100%; width: 100%; border-radius: 5px;" src="{% static 'images/ohh1.jpg' %}" alt="">
+            </div>
+            <div class="yet2" >
+                <img style="height: 100%; width: 100%; border-radius: 5px;" src="{% static 'images/ohh2.jpg' %}" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

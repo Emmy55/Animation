@@ -1,0 +1,106 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'Try/styles.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'Try/drstyle.css' %}">
+</head>
+    <style>
+  
+    </style>
+<body>
+    <div class="box">
+
+        <!-- onchange="location = this.value;" -->
+        <section id="header-container">
+            <select onchange="location = this.value;">
+              <option class="option" value="{% url 'add' %}">SIMPLE MATHS</option>
+              <option class="option" value="{% url 'home' %}">VARIATION</option>
+              <option class="option" value="choix-3">SIMULTANEOUS EQUATION</option>
+              <option class="option" value="choix-4">QUADRATIC EQUATION</option>
+              <option class="option" value="choix-5">MATRIX</option>
+            </select>
+          </section>
+        <section id="header-container1">
+            <select onchange="location = this.value;">
+              <option id="option" value="{% url 'add' %}">ADDITION</option>
+              <option id="option" value="">SUBTRACTION</option>
+              <option id="option" value="choix-3">DIVISION</option>
+              <option id="option" value="choix-4">MULTIPLICATION</option>
+              <option id="option" value="choix-5">SQUARE</option>
+              <option id="option" value="choix-5">SQUARE ROOT</option>
+            </select>
+          </section>
+          <form class="form"  action="{% url 'ans' %}" method="get">
+          <input class="form" id="one" placeholder="First number" type="number" name="first"> 
+          <input id="two" placeholder="Second number" type="number" name="second">
+            <input class="rem" type="submit" value="CALCULATE" >
+        </form>
+
+    </div> 
+
+
+
+
+
+
+
+          {% block 'sect' %}
+
+
+
+
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+        <select name="option" id="option">
+            <option value="">SIMPLE MATHS</option>
+            <option value="">VARIATION</option>
+            <option value="">SIMUL... equ</option>
+            <option value="">QUADRATIC</option>
+            <option value="">MATRIX</option>
+        </select>
+
+        
+        <select name="option1" id="option1">
+            <option value="">ADDITION</option>
+            <option value="">SUBTRACTION</option>
+            <option value="">DIVISION</option>
+            <option value="">MULTIPLICATION</option>
+            <option value="">SQUARE</option>
+            <option value="">SQUARE ROOT</option>
+        </select>
+
+        <form action="{% url 'ans' %}" method="get">
+            <input id="inp" type="number" name='adfirst'> <br>
+            <input id="inp" type="number" name='adsec'> <br>
+            <input type="submit" value="CALCULATE">
+        </form>-->
+
+  
+
+
+
+
+    
+</body>
+<script src="{% static 'Try/drscript.js' %}"></script>
+</html>

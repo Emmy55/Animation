@@ -1,0 +1,206 @@
+{% extends 'Try/layout.html' %}
+
+{% load static %}
+
+
+{% block 'set' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: cursive;
+    }
+    #quad{
+        display: none;
+    }
+        .cont{
+        height: 300px;
+        /* text-align: center; */
+        padding: 10px;
+        bottom: 150px;
+        width: 350px;
+        border-radius: 0px 40px 40px 0px;
+        position: relative;
+        left: 652px;
+        top: -200px;
+    }
+    .yum{
+        position: relative;
+        
+        height: 28px;
+        top:14px;
+        left:80px;
+        border-radius: 09px;
+        border: none;
+    }
+     .yum1{
+        position: relative;
+        bottom: -35px;
+        height: 28px;
+        left:80px;
+        border-radius: 09px;
+        border: none;
+    }
+    .yum2{
+        height: 28px;
+        position: relative;
+        left:80px;
+        border-radius: 09px;
+        border: none;
+        bottom: -60px;
+    } 
+    .yum4{
+        left:80px;
+
+        height: 28px;
+        position: relative;
+        border-radius: 09px;
+        border: none;
+        bottom: -80px;
+    }
+    .yum5{
+        height: 28px;
+        position: relative;
+        border-radius: 09px;
+        left:80px;
+
+
+        border: none;
+        bottom: -100px;
+    } 
+    .yum6{
+        height: 28px;
+        position: relative;
+        border-radius: 09px;
+        left:132px;
+
+
+        border: none;
+        
+        bottom: -120px;
+    }
+    #yum3{
+        position: relative;
+        bottom: -170px;
+        border-radius: 15px;
+        background-color:#ffffff ;
+        height: 30px;
+        width: 100px;
+        left:-20px;
+
+        border: none;
+        
+    }
+    /* #vari{
+        display: none;
+    } */
+    #option1{
+    display: none;
+}
+
+/* #option31{
+    position: relative;
+    left: 920px;
+
+} */
+#ari{
+            display: none;
+        }
+#ansbook1{
+    position: relative;
+    top: 120px;
+    left:40px;
+}
+#vor {
+    display: none;
+}
+#option{
+            position: absolute;
+            top: 80px;
+        }
+#option3, #option31{
+    display: block;
+    background-color: rgb(255, 255, 255);
+        height: 30px;
+        margin-bottom: 10px;
+        width:250px;
+        position: relative;
+        top: 50px;
+        left: 265px;
+}
+.option{
+    position: relative;
+    top: 90px;
+    left: 241px;
+}
+@media only screen and (max-width:600px) {
+        #option{
+            position: absolute;
+            top: 80px;
+        }
+#active1 {
+    width: 262px;
+    height: 45px;
+    border-radius: 30px;
+    position: relative;
+    /* top: 20px; */
+    /* background-color: white; */
+    border: none; 
+    background-color: #feac1394;
+    
+}
+#option1{
+    display: none;
+}
+
+#option3, #option31{
+        display: block;
+        background-color: rgb(255, 255, 255, 0.671);
+        height: 30px;
+        margin-bottom: 10px;
+        width:250px;
+        position: relative;
+        top: 80px;
+        left: 65px;
+}
+    .option {
+        position: relative;
+        top: 100px;
+        left: 60px;
+    }
+#ari{
+            display: none;
+        }
+#ansbook1{
+    position: relative;
+    top: 120px;
+    left: 50px;
+}
+#vor {
+    display: none;
+}}
+</style>
+<body>
+    <div class="cont">
+        <form action="{% url 'ansbook6' %}" method="get">
+            <input class="yum" type="number" placeholder="x = " name="first">
+            <input class="yum1" type="number" placeholder="y = " name="second">
+            <input class="yum2" type="number" placeholder="ans = " name="third">
+            <input class="yum4" type="number" placeholder="x = " name="forth">
+            <input class="yum5" type="number" placeholder="y = " name="fifth">
+            <input class="yum6" type="number" placeholder="ans = " name="sixth">
+            <input id="yum3" type="submit" value="Solve">
+        </form>
+    </div>
+</body>
+</html>
+
+
+{% endblock %}

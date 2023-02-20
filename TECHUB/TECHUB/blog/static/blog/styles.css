@@ -1,0 +1,177 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'josefine', sans-serif ;
+    box-sizing: border-box;
+}
+nav{
+    background-color: green;
+    padding: 15px;   
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+nav > ul >li {
+    display: inline;
+    padding: 15px;
+}
+.register{
+    cursor: pointer;
+    display: flex;
+
+}
+
+li > a{
+    text-decoration: none;
+    color: white;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.reg{
+    padding: 0px 15px;
+
+}
+.burger{
+    display: none;
+}
+.foot{
+    display: flex;
+    justify-content: space-around;
+}
+footer{
+    background-color: green;
+    text-align: center;
+    color: white;
+    padding: 15px;
+
+}
+.ft > li, form > li {
+    list-style: none;
+}
+.ft{
+    text-align: left;
+}
+
+input[type = 'text']{
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    
+}
+input[type = 'submit'] {
+    padding: 10px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+
+}
+
+.one > h1 {
+    font-size: 80px;
+}
+.reg > a, .login > a {
+    text-decoration: none;
+    color: white;
+}
+.hero{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+.one, .two {
+    margin: 2px;
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.one{
+    flex: 40%;
+    flex-direction: column;
+}
+.two{
+    flex: 60%;
+}
+a:hover {
+	text-decoration: none;
+	color: #57b846;
+}
+.article{
+    width: 100%;
+    background-color: rgb(47, 0, 255);
+    display: flex;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+}
+.artone{
+    flex: 75%;
+    background-color: rgba(255, 0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.arttwo{
+    height: 100vh;
+    position: sticky ;
+    top: 0;
+    flex: 25%;
+    background-color: rgb(0, 255, 166);
+  }
+  .sect > h1 {
+    width: 75%;
+    text-align: center;
+  }
+@media screen and (max-width:600px){
+    .burger{
+        display: block;
+    }
+    nav > ul >li{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        background-color: green;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 40px;
+        clip-path: polygon(0 0, 100% 0, 0 0, 100% 0);
+        transition: 1s all;
+    }
+    .clipped{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transition: 1s all;
+
+    }
+    .hero{
+        flex-wrap: wrap;
+    }
+    .logo{
+        flex: auto;
+    }
+    .one{
+        text-align: center;
+        padding: 20px;
+    }
+    .one > h1 {
+        height: 30vh;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .one > p {
+        font-size: smaller;
+        width: 70%;
+    }
+    .foot{
+        flex-wrap: wrap;
+        padding: 20px;
+        justify-content: space-between;
+    }
+}

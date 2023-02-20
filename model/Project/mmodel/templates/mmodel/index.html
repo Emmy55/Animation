@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mmodel</title>
+    <link rel="stylesheet" href="{%static 'mmodel/styles.css'%}">
+</head>
+<body>
+    <section>
+        {% for x in try %}
+
+        <div class="one">
+            <div class="banner"></div>
+            <h2>{{x.num}}</h2>
+            <h1>{{x.title}}</h1>
+            <p>{{x.des}}</p>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>

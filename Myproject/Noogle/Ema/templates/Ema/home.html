@@ -1,0 +1,25 @@
+{% extends 'Ema/layout.html' %}
+
+{% load static %}
+
+{% block 'section' %}
+
+
+<div class="cool">
+    <h2>{{ mynames.name}}</h2>
+    <p>{{mynames.des}}</p>
+</div>
+<div class="cool">
+    <h2>{{snames.name}}</h2>
+    <p>{{snames.des}}</p>
+</div>
+<div class="cool">
+    <h2>{{dnames.name}}</h2>
+    <p>{{dnames.des}}</p>
+</div>
+
+
+<!-- <img src="{%static 'Ema/images/cool.jpg'%}" alt=""> -->      
+
+{% endblock %}
+

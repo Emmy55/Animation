@@ -1,0 +1,114 @@
+{% extends 'host/layout.html' %}
+
+
+{% load static %}
+
+{% block 'section' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color: white;
+        border-radius: 5px;
+
+        }
+        .box{
+        flex-wrap: wrap;
+        display: flex;
+        /* justify-content:center; */
+        background-color:rgba(34, 31, 203, 0);
+        height: 700px;
+        width: 88.4%;
+        align-items: center;
+        position:relative ;
+        z-index: -1;
+        right: -90px;
+        /* flex-direction:column; */
+    }
+    .one {
+        background-color: rgba(87, 36, 214, 0.607);
+        width:85%;
+        height: 500px;
+        margin: 2px;
+        flex: 10%;
+        
+    }
+    .main 
+        {
+        /* flex-wrap: wrap; */
+        display: flex;
+        /* justify-content:center; */
+        background-color:rgb(0, 0, 0);
+        height: 400px;
+        width: 88.4%;
+        /* align-items: center; */
+        position:relative ;
+        /* z-index: -1; */
+        right: -90px;
+    }
+    #two {
+        margin-left: 25px;
+    }
+    .bum {
+        background-color: rgb(97, 139, 236);
+        font-weight: bolder;
+        border: none; 
+        border-radius: 5px;
+        height:55px;
+        width: 150px;
+    }
+    body {
+        background-image: url("{% static 'images/dope.gif' %}");
+        background-repeat: no-repeat;
+        background-size: 100% 180%;
+    }
+    .hen{
+        font-size: 60px;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="one"><br>
+            
+            <h1 class="hen">{{mine1.name}}</h1>
+            <p>{{mine1.des}}</p>
+            <!-- <br><br> -->
+            <button style="background-color: rgb(97, 139, 236); border: none; border-radius: 5px; height:55px; width: 150px;">Start Now</button>
+        </div>
+        <div class="two">
+            <h1>{{sine1.name}}</h1>
+            <p>{{sine1.des}}</p>
+            <!-- <img style="height: 500px; width: 300px;" src="{% static 'images/gg.jpg' %}" alt=""> -->
+        </div>
+        <div class="three">
+            <h1>{{dine1.name}}</h1>
+            <p>{{dine1.des}}</p>
+            <!-- <img style="height: 500px; width: 300px;" src="{% static 'images/graduate2.jpg' %}" alt=""> -->
+        </div>
+        
+        <!-- <h1>This is a heading</h1>    -->
+    </div>
+    <div class="main">
+        <div id="one">
+            <img id="image" src="coderpics.jpg" alt="">
+        </div>
+        <div id="two">
+            <h3>This is a heading that needs editing</h3>
+            <p>Lorem, ipsum dolor Loresectetur adipisicing elit.ctfyfyugu libero adhfcfx repellendus debitis accusamus ullam veritatis quidem maxime voluptatum odit dolor nisi odio cupiditate ab expedita nobis dolorem. Modi, tempora. Fugit hic voluptatem itaque omnis quia facilis quod laborum voluptatibus neque.sit amet consectetur adipisicing elit. Dolor distinctio, et magni non culpa quam, amet nisi voluptatum ex pariatur voluptatem odit, natus reprehenderit facere molestiae tempore veniam neque. Deserunt magnam architecto ipsum id repellendus. Id error assumenda quisquam nisi? Quaerat nesciunt dignissimos, sit adipisci numquam excepturi dolore. Ullam, voluptatibus iure ea at modi, maiores cum facilis obcaecati blanditiis itaque culpa magni dolore rem voluptatum dignissimos. Nostrum temporibus quos, at, laborum adipisci officia aperiam facilis quisquam reiciendis soluta alias? Rem beatae odit autem minima vero quasi quia magni repudiandae illum?</p>
+            <button class="bum" ><a href="#">Learn More</a></button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+{% endblock %}
+
+

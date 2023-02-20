@@ -1,0 +1,48 @@
+section{
+    height: 80vh;
+    background: linear-gradient(gold, black);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 0px;
+    z-index: -5;
+}
+.one{
+    background-color: white;
+    margin: 5px;
+    height: 300px;
+    z-index:-3 ;
+    overflow: hidden;
+    width: 300px;
+    position: relative;
+}
+.banner {
+    width: 200px;
+    height: 70px;
+    z-index: -2;
+    position: absolute;
+    right: -120px;
+    transform: rotate(40deg);
+    background-color: orange;
+}
+h2{
+    color: white;
+    padding: 0px;
+    padding-right: 10px;
+    padding-top: 5px;
+    z-index:1;
+    position: relative;
+    text-align: right;
+    margin: 0px;
+}
+h1{
+    padding: 20px;
+    font-size: xx-large;
+    text-align: center;
+    border: 1px solid orange;
+}
+p{
+    text-align: center;
+    font-size: xx-large;
+}

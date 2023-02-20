@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic</title>
+</head>
+<body>
+    <form name="YourFormName" id="id_YourFormName"  action="" method="get">
+        <select name="category" id="id_category" form="id_YourFormName">
+            {% for category in categories %}
+               <option value="{{category}}">{{category}}</option>
+            {% endfor %}
+        </select>
+        <select name="course" id="id_course" form="id_YourFormName">
+            
+        </select>
+
+    </form>
+</body>
+<script>
+    document.getElementById('id_category').addEventListener('change', function(){
+        document.getElementById('id_course').innerHTML = "";
+        $.ajax ({
+            type: 'GET',
+            url : "get-courses/",
+            data: {
+                category : $('#d_category').val(),
+            },
+            dataType: 'json',
+            success:function(response){
+                var select  = document.getElementById('id_course');
+                for(var i=0; i<response.courses.length; i++)
+                {
+                    var option = document.createElement('option');
+                    option.value = response.courses[i]['Course_Name'];
+                    select.appendChild(option);
+                }
+            },
+        });
+    });
+</script>
+</html>

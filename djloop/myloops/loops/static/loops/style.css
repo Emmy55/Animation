@@ -1,0 +1,25 @@
+.box {
+    background-color: green;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.one {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+
+}
+.line {
+    padding: 10px;
+    background-color: orange;
+    margin-top: 20px;
+    text-align: center;
+    font-size: xx-large;
+}
+p{
+    text-align: center;
+}

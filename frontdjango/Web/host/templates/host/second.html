@@ -1,0 +1,104 @@
+{% extends 'host/layout.html' %}
+
+
+{% load static %}
+
+{% block 'section' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="web.css"> -->
+    <!-- <link rel="stylesheet" href="sign_page.css"> -->
+</head>
+<style>
+    
+        
+        .big{
+             backdrop-filter: blur(30px);
+            box-sizing: border-box;
+            padding-bottom: 3px;
+            text-transform: capitalize;
+            background-color: rgba(57, 62, 217, 0.281);
+            width: 70%;
+            height: 700px;
+            border-radius: 30px;
+            padding:.0px;
+            
+        }
+    p{
+        margin-top: 50px;
+    }
+    input{
+        border-color: rgba(255, 255, 255, 0);
+        outline-style: none;
+        width: 220px;
+        height: 30px;
+        border-radius: 10px;
+        padding-bottom: 1px;
+
+    }
+    
+    #blk{
+        background-color: black;
+        outline-style: none;
+        border-color: black;
+        width: 150px;
+        color: white;
+    }
+    .frst{
+        color: black;
+    }
+    #fnt{
+        color: white;
+    }
+    #ler{
+        background-position: left;
+        position:relative;
+        bottom: 700px;
+    }
+    #sub{
+        background-color: black;
+        color: white;
+    }
+    .first{
+        
+        color: white;
+    }
+</style>
+<body>
+        <center><br>
+        <div class="big">
+        <form action="mail-to('nkememmanuel5505@gmail.com')">
+        <div class="first">
+        <p> First name</p>
+        <input type="text" placeholder="First name">
+
+        <p> Last Name</p>
+        <input type="text" placeholder="Last name">
+    
+        <p> Email Address</p>
+        <input type="" placeholder="Middle name">
+    
+         <p> Create Password</p>
+        <input id="frs" type="password" placeholder="password">
+    
+        <p>Confirm Password</p>
+        <input id="frs" type="password" placeholder="password"><br><br>
+        <input id="sub" type="submit">
+       </div>
+       
+    <!-- <a href="blog.html">   <img src="backlogo.jpg" alt="" width="100px" height="100px" style="border-radius:100% ;"></a> -->
+    </center>
+      </form>
+    <!-- <script>
+        var fis = document.getElementById("#frs");
+        var cot = document.getElementById("#con");
+    </script> -->
+</body>
+</html>
+
+{% endblock %}

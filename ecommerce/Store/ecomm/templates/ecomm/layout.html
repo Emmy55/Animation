@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        background-size: contain;
+        height: 700px;
+        width: 1300px;
+    }
+    button {
+        position: relative;
+        bottom: 200px;
+        left: 640px;
+        border-radius: 3px;
+        color: black;
+        border: none;
+        background-color: purple;
+    }
+</style>
+<body>
+    <div>
+    <img src="{% static 'ecomm/background.jpg' %}" alt="">
+    
+    <a class="but" href="{% url 'shop1' %}"><button>SHOP NOW</button></a>
+</div>
+<div>
+    <img src="{% static 'ecomm/code.jpg' %}" alt="">
+    
+    <a href="{% url 'shop1' %}"><button>SHOP NOW</button></a>
+</div>
+<div>
+    <img src="{% static 'ecomm/glass.jpg' %}" alt="">
+
+    <a href="{% url 'shop1' %}"><button>SHOP NOW</button></a>
+</div>
+</body>
+</html>

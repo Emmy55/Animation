@@ -1,0 +1,48 @@
+{% extends 'Try/layout.html' %}
+
+{% load static %}
+
+
+{% block 'set' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: cursive;
+    }
+    .cont{
+
+        height: 250px;
+        /* color:#FEAD13 ; */
+        color:#ffffff ;
+        text-align: center;
+        width: 250px;
+        border-radius: 0px 40px 40px 0px;
+        position: relative;
+        top:-190px;
+
+        left: 782px;
+    }
+    #para {
+        position:relative;
+        bottom: -90px;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+</style>
+<body>
+    <div class="cont">
+ 
+    <p id="para">The Final Answer is <br> {{ ans }} </p>   
+</div>
+</body>
+</html>
+
+{% endblock %}

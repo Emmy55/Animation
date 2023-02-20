@@ -1,0 +1,103 @@
+{% extends 'Ads/layout.html' %}
+
+{% load static %}
+
+{% block 'section' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <style>
+        .middles{
+            backdrop-filter: blur(30px);
+            height: 400px;
+            width: 450px;
+            background-color:rgba(50, 50, 201, 0.308);
+            margin-top: 110px;
+            border-radius: 20px;
+        }
+        .lefts{
+            backdrop-filter: blur(30px);
+            height: 370px;
+            width: 350px;
+            background-color:rgba(50, 50, 201, 0.308);
+            margin-top: 110px;
+            position:absolute;
+            right: 500px;
+            top:-92px;
+            border-radius: 20px;
+        }
+        #rights{
+            backdrop-filter: blur(30px);
+            height: 370px;
+            width: 350px;
+            background-color:rgba(50, 50, 201, 0.308);
+            margin-top: 110px;
+            position:absolute;
+            left: 500px;
+            top:-92px;
+            border-radius: 20px;
+        }
+        .lowwidget{
+            background-color: black;
+            color: white;
+            position:absolute;
+            /* bottom: -0.4px;
+            width: 10%;
+            height: 100px;
+            padding-left: 1.5px; */
+            width: 100%;
+            height: 120px;
+            font-size: 4px;
+            border-radius: 15px;
+        }
+        .mdbt button{
+            background-color: blue;
+            border-style: none;
+            width: 240px;
+            height: 40px;
+            border-radius: 13px;
+            position: absolute;
+            bottom: 100px;
+            left: 110px;
+        }
+        .mdbt{
+            position:initial;
+            bottom: 180px;
+            left: 110px;
+        }
+        .def {
+            position: absolute;
+            right: 700px;
+            bottom: 60px;
+        }
+    </style>
+    <body>
+        <center>
+        
+        <marquee behavior="alternate" direction="right" style="border:black(2px) ">
+            
+        <div class="middles">
+            <a href="dev.html" class="mdbt"><button>Download Picture</button></a>
+            <h1>    <br><center>
+                             BAFUTO COLLEGE OF TECH</h1>
+            <p class="mdbt"></p>
+        </center>
+            <div class="lefts"></div>
+            <div id="rights"></div>
+        </marquee>
+        </div>
+        <!-- <br><br> -->
+        
+    </center>
+    </div>
+    </body>
+    
+
+
+{% endblock %}

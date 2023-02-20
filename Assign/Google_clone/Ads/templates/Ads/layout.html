@@ -1,0 +1,160 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+       background-color: rgb(255, 255, 255);
+       width: 100%;
+       position: absolute;
+       top: 150px;
+       height: 200px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   .one {
+       background-color: rgb(25, 14, 180);
+       width: 300px;
+       padding: 3px;
+       display: inline;
+       border-radius: 10px;
+       height: 300px;
+       margin: 10px;
+   
+   }
+   .nine {
+       /* padding: 10px; */
+       /* background-color: orange; */
+       /* margin-top: 20px; */
+       height: 100px;
+       text-align: center;
+       font-size: 30px;
+   }
+   .p{
+    position: relative;
+    top: 20px;
+   }
+    img{
+        height: 30px;
+    }
+    span {
+        position: absolute;
+        top: 13px;
+        padding-left: 4px;
+    }
+    .but1:hover{
+        color: black;
+    }
+    .but1 {
+        display: inline;
+        position: relative;
+        left: 75%;
+        /* text-decoration: none; */
+        height: 40px;
+        width: 120px;
+        color:blue;
+        
+        border: none;
+        border-radius: 3px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .but2 {
+        display: inline;
+        position: relative;
+        left: 75%;
+        height: 40px;
+        width: 120px;
+        background-color: blue;
+        text-decoration: none;
+        border: none;
+        border-radius: 3px;
+    }
+    /* .nav1 {
+        background-color: rgba(124, 94, 94, 0.882);
+    } */
+    
+    div {
+        display: flex;
+        justify-content: space-around;
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .un {
+        text-decoration: none;
+    }
+    .dem{
+        position: relative;
+        bottom:-400px;
+
+    }
+    .hr{
+        width: 100%;
+    }
+</style>
+<body>
+    
+    <nav class="nav">
+        <img src="{% static 'Ads/images/google.png'%}" alt="">
+        <span>Ads</span>
+
+        <hr class="hr">
+    </nav>
+
+   
+    <section>
+        <div class="box">
+            {% for x in train %}
+            <div class="one">
+                <div class="nine">
+                    {{x.title}}
+                </div>
+                {{x.des}}
+            </div>
+            {% endfor %}
+        </div>
+        {% block 'section' %}
+
+        
+
+        {% endblock %}
+    </section>
+
+
+<footer class="dem" style="background-color: rgba(39, 47, 53, 0.094); height: 300px; width: 100%;">
+    <!-- <div class="col"> -->
+    <div>
+    <p><strong>About Google Ads</strong> <br> How it Works <br> Cost <br> FAQ <br> Advanced resources</p>
+    <p><strong>Learning & support</strong> <br> Your Guide to Google Ads <br> Google Ads Help Center</p>
+    <p><strong>Developers & patners</strong> <br>Google Developers Site <br> Google Ads API(AdWords <br>API)<br> Google Ads Scripts<br> Google Ads Remarketing <br>Tags</p>
+    <p><strong>Related products</strong> <br> Shopping campaigns <br><strong>Business Profile </strong><br> Chrome <br></p>
+    <p><strong>More solutions</strong> <br>Business Solutions<br> Google Workspace<br> Think with Google<br>Adsense <br>Admob</p>
+    <br><br><br>
+    </div>
+    <hr>
+    <br>
+    <img src="{% static 'Ads/images/igm.png'%}" alt="">
+    <ul>
+        <li>Privacy</li>
+        <li>Terms</li>
+        <li>About Google</li>
+        <li>Google products</li>
+        <li>Nigeria - English</li>
+    </ul>
+</footer>
+<!-- </div> -->
+</body>
+<script src="{% static 'Ads/scripts.js' %}"></script>
+</html>

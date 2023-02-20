@@ -1,0 +1,144 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'Try/cal.css' %}">
+</head>
+
+<body>
+    <img class="img1" src="{% static 'Try/images/bkgrnd.gif' %}" alt="">
+    <div class="side">
+        <form action="">
+        <select  onchange="location = this.value;" name="option" id="option">
+            <!-- <option class="nam" value="{% url 'lay' %}">--Select one--</option> -->
+            <option class="nam" value="{% url 'sel' %}">SIMPLE MATH</option>
+            <option class="nam" value="{% url 'selvaria' %}">VARIATION</option>
+            <option class="nam" value="{% url 'simul' %}">SIMUL.. EQU</option>
+            <option class="nam" value="{% url 'quad' %}">QUADRATIC</option>
+            <option class="nam" value="">MATRIX</option>
+        </select><br>
+        
+        <select onchange="location = this.value;" name="" id="option1">
+
+            <!-- <option class="vari addd" value="">--Select one--</option> -->
+            <option class="vari addd" value="{% url 'ads' %}">ADDITION</option>
+            <option class="vari" value="{% url 'sub' %}"> SUBTRACTION</option>
+            <option class="vari" value="{% url 'mult' %}">MULTIPLICATION</option>
+            <option class="vari" value="{% url 'div' %}">DIVISION</option>
+            <option class="vari" value="{% url 'squa' %}">SQUARE</option>
+            <option class="vari" value="{% url 'sqrt' %}">SQUARE ROOT</option>
+            <option id="vari1" value="{% url 'direct' %}">DIRECT</option>
+            <option id="vari1" value="{% url 'inverse' %}">INVERSE</option>
+            <option id="vari1" value="{% url 'mult' %}">PARTIAL</option>
+            <option id="vari1" value="{% url 'div' %}">JOINT</option>
+        </select><br><br>
+    <form action="{% url 'ansbook' %}" method="get">
+        <input type="number" class="bor"  id="ari" placeholder=" first number"><br>
+        <input type="number" class="bor"  id="ari" placeholder=" second number">
+        <!-- <input value="Calculate"  type="submit" class="option"> -->
+
+    </form>
+        
+        <input type="number" class="bor"  id="vor" placeholder=" a = ">
+        <input type="number" class="bor"  id="vor" placeholder=" b = ">
+        <input type="number" class="bor"  id="vor" placeholder=" a1 = ">
+        <input type="number" class="bor"  id="vor" placeholder=" b1 = ">
+        <form action="{% url 'ansbook7' %}" method="get">
+        <input type="number" class="bor"  id="quad" placeholder=" a = ">
+        <input type="number" class="bor"  id="quad" placeholder=" b = ">
+        <input type="number" class="bor"  id="quad" placeholder=" c = ">
+        </form>
+        <input type="number" class="bor"  id="option31" placeholder=" x = ">
+        <input type="number" class="bor"  id="option31" placeholder=" y = ">
+        <input type="number" class="bor"  id="option3" placeholder=" ans = ">
+        <input type="number" class="bor"  id="option3" placeholder=" x = ">
+        <input type="number" class="bor"  id="option3" placeholder=" y = ">
+        <input type="number" class="bor"  id="option3" placeholder=" ans = ">
+       
+        <input value="Calculate" type="submit" class="option">
+        <!-- <button id="ansbook2" class="option">CALCULATE</button> -->
+</form>
+    <!-- <img class="img2" src="{% static 'Try/images/role.gif' %}" alt=""> -->
+    
+        <!-- <div class="dropdown">
+            <button class="dropbtn"><img src="{% static 'Try/menu.png'%}" alt=""></button>
+            <div class="dropdown-content">
+                <a id="incon1" href="{% url 'sel' %}"><button id="active3"  class="incon12"><strong>SIMPLE MATHS</strong></button></a><br>
+                <a id="incon1" href="{% url 'sel' %}"><button id="active3"  class="incon12"><strong>SIMPLE MATHS</strong></button></a><br>
+                <a id="incon1"  href="{% url 'selvaria' %}"><button id="active" class="incon2"><strong>VARIATION</strong></button></a><br>
+                <a id="incon1" href="{% url 'simul' %}"><button id="active1" class="incon3"> <strong>SIMUL. equ</strong></button></a><br>
+                <a id="incon1" href="{% url 'quad' %}"><button id="active2" class="incon4"><strong>QUADRATIC</strong></button></a><br>
+                <button class="incon5"><strong>MATRIX</strong></button>
+            </div>
+        </div> -->
+    <div class="con">
+
+        <p class="para" class="para">WHAT WOULD YOU LIKE TO CALCULATE</p>
+        
+        <!-- <a id="incon1" href="{% url 'sel' %}"><button id="active3"  class="incon12"><strong>SIMPLE MATHS</strong></button></a><br>
+       <a id="incon1"  href="{% url 'selvaria' %}"><button id="active" class="incon2"><strong>VARIATION</strong></button></a><br>
+       <a id="incon1" href="{% url 'simul' %}"><button id="active1" class="incon3"> <strong>SIMUL. equ</strong></button></a><br>
+       <a id="incon1" href="{% url 'quad' %}"><button id="active2" class="incon4"><strong>QUADRATIC</strong></button></a><br>
+       <button class="incon5"><strong>MATRIX</strong></button> -->
+       <!-- <img class="img2" src="{% static 'Try/images/role.gif' %}" alt=""> -->
+
+       <div class="sma">
+       {%block 'set'%}
+
+
+
+
+
+       {% endblock%}
+    
+    <div class="big">
+    </div>
+</div>
+</div>
+
+</div>
+    <!-- <script>
+    //     var one = document.getElementById('incon12');
+    //     // var one1 = document.getElementById('incon12');
+        function changecolor() {
+            // addEventListener.style.backgroundColor('green');
+            document.getElementById('incon1').style.backgroundColor = '#FEAD13'
+
+    }
+            // style.backgroundColor = ('blue')}
+        function changecolor1() {
+            // addEventListener.style.backgroundColor('green');
+            document.getElementById('incon12').style.backgroundColor = '#FEAD13'
+
+    }
+            // style.backgroundColor = ('blue')} v
+
+
+            // onclick.document.getElementId('incon12').
+    </script> -->
+    <!-- <script>
+        var urlMenu = document.getElementById('option');
+        urlMenu.onchange = function(){
+            var userOption = this.options[this.selectedIndex];
+            if (userOption.value != 'nothing'){
+                windows.open(userOption.value, "");
+            }
+
+
+            
+        }
+    </script> -->
+
+    <!-- <script type="text/javascript">
+        function handleSelect(elm)  {
+            window.location = elm.value
+        }
+    </script> -->
+</body>
+
+</html>
