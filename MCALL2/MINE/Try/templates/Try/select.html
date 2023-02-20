@@ -1,0 +1,151 @@
+{% extends 'Try/layout.html' %}
+
+{% load static %}
+
+
+{% block 'set' %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @media only screen and (min-width:600px) {
+    #active3 {
+        width: 262px;
+        height: 45px;
+        border-radius: 30px;
+        position: relative;
+        /* top: 20px; */
+        /* background-color: white; */
+        border: none; 
+        background-color: #feac1394;
+    
+}
+    }
+     
+    *{
+        font-family: cursive;
+    }
+    .cont{
+        height: 350px;
+        text-align: center;
+        width: 250px;
+        
+        border-radius: 0px 40px 40px 0px;
+        position: relative;
+        left: 652px;
+        top: -60px;
+    }
+
+    .inbut{
+        height: 40px;
+        width: 150px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        position:relative;
+        top:-120px;
+        left:130px;
+        border: none;
+        background-color:#ffffff;
+        
+    }
+    .inbut1{
+        height: 40px;
+        border: none;
+        width: 150px;
+        border-radius: 20px;
+        position:relative;
+        top:-120px;
+        left:130px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        background-color:#ffffff;
+        
+    }
+    .inbut2{
+        height: 40px;
+        width: 150px;
+        border: none;
+        margin-top: 5px;
+        position:relative;
+        top:-120px;
+        left:130px;
+        border-radius: 20px;
+        background-color:#ffffff;
+        margin-bottom: 10px;
+        
+    }
+    .inbut3{
+        height: 40px;
+        width: 150px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        position:relative;
+        top:-120px;
+        left:130px;
+        border: none;
+        background-color:#ffffff;
+        
+    }
+    .inbut4{
+        height: 40px;
+        width: 150px;
+        border-radius: 20px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: none;
+        position:relative;
+        top:-120px;
+        left:130px;
+        background-color:#ffffff;
+        
+    }
+    .inbut5{
+        height: 40px;
+        width: 150px;
+        border-radius: 20px;
+        border: none;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        
+        position:relative;
+        top:-120px;
+        left:130px;
+        background-color:#ffffff;
+        
+    }
+    #inbut{
+        text-decoration: none;
+        color: black;
+    }
+</style>
+<body>
+    {% block 'sect' %}
+
+
+        {% endblock %}
+    <div class="cont">
+        
+        <button class="inbut"><a id="inbut" href="{% url 'ads' %}"> <strong>ADDITION</strong></a></button><br>
+        <button class="inbut1"><a id="inbut" href="{% url 'sub' %}"><strong>SUBTRACTION</strong></a></button><br>
+        <button class="inbut2"><a id="inbut" href="{% url 'mult' %}"> <strong>MULTIPLICATION</strong></a> </button><br>
+        <button class="inbut3"><a id="inbut" href="{% url 'div' %}"> <strong>DIVISION</strong> </a></button><br>
+        <button class="inbut4"><a id="inbut" href="{% url 'squa' %}"> <strong>SQUARE</strong></a> </button><br>
+        <button class="inbut5"><a id="inbut" href="{% url 'sqrt' %}"> <strong> SQUARE ROOT</strong></a></button><br>
+    </div>
+</body>
+</html>
+
+
+
+
+
+{% endblock %}

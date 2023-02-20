@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        animation-name: change;
+        animation-duration: 40s;
+        animation-iteration-count: infinite;
+        background-size: 100%;
+        overflow: hidden;
+        animation-delay: 0ms;
+        animation-direction: reverse;
+    }
+    @keyframes change{
+        20%{
+            background-image: url(tech1.jpg);
+            
+            background-repeat: no-repeat;
+            background-size: 1500px;
+        }
+        40%{
+            background-image: url(tech2.jpg);
+            
+            background-repeat: no-repeat;
+            background-size: 1500px;
+
+
+        }
+        60%{
+            background-image: url(tech3.jpg);
+            
+            background-repeat: no-repeat;
+            background-size: 1500px;
+
+
+        }
+    }
+    .bot{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 200px;
+        border-radius: 30px;
+        position: relative;
+        left: 45%;
+        top: 150px;
+
+        
+    }
+    h1{
+        padding: 9px;
+        color: white;
+    }
+</style>
+<body>
+    
+    <div class="bot">
+        <h1 class="one"></h1>   =       
+        <h1 class="two"></h1>
+    </div>
+</body>
+<script>
+    function pie(r){
+        a = 3.142
+        z = a * r * r
+        document.querySelector('.one').innerHTML = r
+        document.querySelector('.two').innerHTML = z
+    }
+    color = prompt('What is your favourite color? ')
+    value1 = parseInt(prompt("What is your r? "))
+    document.querySelector('.bot').style.backgroundColor = color
+
+
+ pie(value1)
+</script>
+</html>

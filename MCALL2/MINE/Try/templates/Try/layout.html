@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'Try/cal.css' %}">
+</head>
+<body>
+    <a id="img1" href="{% url 'lay' %}"><img class="img1" src="{% static 'Try/images/back.jpg' %}" alt=""></a>
+    <div class="side">
+    <!-- <img src="{% static 'Try/images/role.gif' %}" alt=""> -->
+    
+    <div class="con">
+        <p class="para" class="para">WHAT WOULD YOU LIKE TO CALCULATE</p>
+        
+        <a id="incon1" href="{% url 'sel' %}"><button id="active3"  class="incon12"><strong>SIMPLE MATHS</strong></button></a><br>
+       <a id="incon1"  href="{% url 'selvaria' %}"><button id="active" class="incon2"><strong>VARIATION</strong></button></a><br>
+       <a id="incon1" href="{% url 'simul' %}"><button id="active1" class="incon3"> <strong>SIMUL. equ</strong></button></a><br>
+       <a id="incon1" href="{% url 'quad' %}"><button id="active2" class="incon4"><strong>QUADRATIC</strong></button></a><br>
+       <button class="incon5"><strong>MATRIX</strong></button>
+       <img class="img2" src="{% static 'Try/images/role.gif' %}" alt="">
+
+       <div class="sma">
+       {%block 'set'%}
+
+
+
+
+
+       {% endblock%}
+    
+    <div class="big">
+    </div>
+</div>
+</div>
+
+</div>
+    <!-- <script>
+    //     var one = document.getElementById('incon12');
+    //     // var one1 = document.getElementById('incon12');
+        function changecolor() {
+            // addEventListener.style.backgroundColor('green');
+            document.getElementById('incon1').style.backgroundColor = '#FEAD13'
+
+    }
+            // style.backgroundColor = ('blue')}
+        function changecolor1() {
+            // addEventListener.style.backgroundColor('green');
+            document.getElementById('incon12').style.backgroundColor = '#FEAD13'
+
+    }
+            // style.backgroundColor = ('blue')} v
+
+
+            // onclick.document.getElementId('incon12').
+    </script> -->
+</body>
+
+</html>

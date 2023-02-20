@@ -1,0 +1,74 @@
+{% extends 'Try/layout.html' %}
+
+{% load static %}
+
+
+{% block 'set' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: cursive;
+    }
+    .active{
+        background-color: brown;
+    }
+        .cont{
+        height: 250px;
+        text-align: center;
+        width: 250px;
+        border-radius: 0px 40px 40px 0px;
+        position: relative;
+        left: 652px;
+    }
+    .yum{
+        position: relative;
+        bottom: -30px;
+        height: 28px;
+        border-radius: 09px;
+        border: none;
+    }
+    .yum2{
+        height: 28px;
+        position: relative;
+        border-radius: 09px;
+        border: none;
+        bottom: -60px;
+    }
+    .yum4{
+        height: 28px;
+        position: relative;
+        border-radius: 09px;
+        border: none;
+        bottom: -90px;
+    }
+    .yum3{
+        position: relative;
+        bottom: -100px;
+        border-radius: 4px;
+        background-color:#ffffff ;
+        height: 25px;
+        width: 80px;
+    }
+</style>
+<body>
+    <div class="cont">
+        <form action="{% url 'ansbook8' %}" method="get">
+            <input class="yum" type="number" placeholder="a = " name="first"><br>
+            <input class="yum2" type="number" placeholder="b = " name="second">
+            <input class="yum4" type="number" placeholder="c = " name="third">
+            <input class="yum3" type="submit" value="Solve">
+        </form>
+    </div>
+</body>
+</html>
+
+
+{% endblock %}
